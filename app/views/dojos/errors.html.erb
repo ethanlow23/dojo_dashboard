@@ -1,0 +1,12 @@
+<html>
+    <% if @dojo.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@dojo.errors.count, "error")%> prohibited this post from being saved:</h2>
+        <ul>
+            <% @dojo.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+</html>
